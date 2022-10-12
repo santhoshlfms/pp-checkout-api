@@ -3,7 +3,7 @@
 export default async function handler(req, res) {
 
   let URL = process.env.API_ENDPOINT + "/v2/checkout/orders/CAPTUREID/capture";
-  URL.replace("CAPTUREID", req.query.captureId)
+  URL = URL.replace("CAPTUREID", req.query.captureId)
 
   var httpOptions = {
     method: "post",
